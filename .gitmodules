@@ -1,0 +1,12 @@
+[submodule "neoprism"]
+	path = neoprism
+	url = https://github.com/hyperledger-identus/neoprism.git
+	branch = main
+[submodule "sdk-ts"]
+	path = sdk-ts
+	url = https://github.com/hyperledger-identus/sdk-ts.git
+	branch = main
+[submodule "cloud-agent"]
+	path = cloud-agent
+	url = https://github.com/hyperledger-identus/cloud-agent.git
+	branch = main
