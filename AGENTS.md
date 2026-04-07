@@ -87,6 +87,14 @@ When creating or updating backlog tasks:
 2. For tasks spanning multiple projects, add all relevant labels
 3. For workspace-wide changes (e.g., CI updates, devshell changes), use the `workspace` label
 
+### Backlog Task Assignment
+
+When working on backlog tasks and you need to set an assignee:
+
+- **Always use "ai-agent" as the assignee** when setting an assignee
+- This allows for flexible task ownership and visibility across the team
+- Tasks assigned to "ai-agent" indicate they are being handled by an AI assistant
+
 ---
 
 For deeper context, start with the project-specific instruction files linked above.

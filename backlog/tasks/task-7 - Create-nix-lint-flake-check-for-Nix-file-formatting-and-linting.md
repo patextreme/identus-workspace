@@ -2,8 +2,7 @@
 id: TASK-7
 title: Create nix-lint flake check for Nix file formatting and linting
 status: Done
-assignee:
-  - AI Assistant
+assignee: []
 created_date: '2026-04-06 15:24'
 updated_date: '2026-04-07 13:10'
 labels:
