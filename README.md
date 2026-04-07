@@ -28,17 +28,22 @@ git clone --recurse-submodules git@github.com:patextreme/identus-workspace.git
 
 # Or initialize submodules in an existing clone
 git submodule update --init --recursive
-
-# Enter the development shell
-nix develop
 ```
+
+### Development Shells
+
+Some project submodules provide their own Nix flake with a development devshell, while others do not.
+
+- **For submodules with their own flake**: Navigate to the submodule directory and use its devshell:
+  ```bash
+  cd <submodule> && nix develop -c <command>
+  ```
+
+- **For submodules without a flake**: This workspace's flake provides a devshell that can be used with the corresponding name:
+  ```bash
+  nix develop .#<name> -c <command>
+  ```
 
 ### Frequently Used Commands
 
-```bash
-# List all available just recipes
-just --list
-
-# Format Nix files (flake.nix and nix/**/*.nix)
-just format
-```
+Frequently used commands are packaged as Nix apps and can be run using `nix run .#<app-name>`. Note that this command is assumed to be run from the workspace root directory.
