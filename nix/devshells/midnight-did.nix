@@ -1,19 +1,7 @@
-{ pkgs, ... }:
 {
   perSystem =
     { pkgs, self', ... }:
     {
-      devShells.default = pkgs.mkShell {
-        packages = with pkgs; [
-          docker
-          git
-          just
-          nix
-          nixfmt
-          which
-        ];
-      };
-
       devShells.midnight-did = pkgs.mkShell {
         packages = with pkgs; [
           # Core tools
@@ -27,11 +15,6 @@
           # Playwright for E2E tests
           playwright
           playwright-driver.browsers
-          # Raw compact binaries; may be removed if compact-midnight
-          # provides compactc and zkir directly
-          # inputs.compact.packages.${system}.compactc
-          # inputs.compact.inputs.zkir.packages.${pkgs.system}.zkir
-          # inputs.compact.inputs.zkir-v3.packages.${pkgs.system}.zkir-v3
         ];
         shellHook = ''
           export PLAYWRIGHT_BROWSERS_PATH=${pkgs.playwright-driver.browsers}
@@ -41,4 +24,3 @@
       };
     };
 }
-

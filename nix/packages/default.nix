@@ -1,7 +1,6 @@
-{ pkgs, ... }:
 {
   perSystem =
-    { pkgs, system, ... }:
+    { pkgs, ... }:
     {
       packages = {
         compact-midnight = pkgs.callPackage ./compact-midnight.nix { };

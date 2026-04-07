@@ -9,6 +9,8 @@ Personal development workspace for the [Identus](https://github.com/hyperledger-
 | `neoprism/` | NeoPrism — Prism Node |
 | `cloud-agent/` | Cloud Agent |
 | `sdk-ts/` | TypeScript SDK |
+| `midnight-did/` | Midnight DID — Decentralized Identity |
+| `lace-kyc/` | Lace KYC — KYC functionality for Lace project |
 | `nix/` | Nix flake modules |
 
 ## Setup

@@ -13,3 +13,7 @@
 [submodule "midnight-did"]
 	path = midnight-did
 	url = git@github.com:midnightntwrk/midnight-did.git
+	branch = develop
+[submodule "lace-kyc"]
+	path = lace-kyc
+	url = git@github.com:input-output-hk/lace-kyc.git
