@@ -4,8 +4,9 @@ title: Add midnight-compact binary to midnight-did devshell
 status: Done
 assignee: []
 created_date: '2026-04-06 09:08'
-updated_date: '2026-04-06 10:01'
-labels: []
+updated_date: '2026-04-07 13:10'
+labels:
+  - midnight-did
 dependencies: []
 references:
   - 'github:LFDT-Minokawa/compact'

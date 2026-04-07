@@ -4,8 +4,9 @@ title: 'Address PR #11 review feedback'
 status: Done
 assignee: []
 created_date: '2026-04-06 16:20'
-updated_date: '2026-04-07 09:03'
-labels: []
+updated_date: '2026-04-07 13:10'
+labels:
+  - lace-kyc
 dependencies:
   - TASK-5
 references:

@@ -4,8 +4,9 @@ title: Move midnight-did devshell to its own flake
 status: To Do
 assignee: []
 created_date: '2026-04-07 07:43'
-updated_date: '2026-04-07 07:44'
-labels: []
+updated_date: '2026-04-07 13:10'
+labels:
+  - midnight-did
 dependencies: []
 ---
 

@@ -4,8 +4,9 @@ title: Initialize workspace with git submodules and Nix devshell
 status: Done
 assignee: []
 created_date: '2026-04-06 07:01'
-updated_date: '2026-04-06 08:01'
-labels: []
+updated_date: '2026-04-07 13:10'
+labels:
+  - workspace
 dependencies: []
 references:
   - 'https://github.com/orgs/hyperledger-identus/repositories'

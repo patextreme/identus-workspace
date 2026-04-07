@@ -1,9 +1,10 @@
 ---
-id: DRAFT-1
+id: TASK-12
 title: 'Spike: migrate to lace-sdk'
-status: Draft
+status: To Do
 assignee: []
 created_date: '2026-04-07 10:31'
+updated_date: '2026-04-07 13:12'
 labels: []
 dependencies: []
 references:

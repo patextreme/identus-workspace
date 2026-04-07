@@ -5,8 +5,9 @@ status: Done
 assignee:
   - AI Assistant
 created_date: '2026-04-06 15:24'
-updated_date: '2026-04-06 15:41'
-labels: []
+updated_date: '2026-04-07 13:10'
+labels:
+  - workspace
 dependencies: []
 references:
   - flake.nix

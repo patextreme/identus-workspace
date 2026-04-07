@@ -4,10 +4,9 @@ title: 'Polish PR #245 and make it ready for merge'
 status: To Do
 assignee: []
 created_date: '2026-04-06 16:23'
-updated_date: '2026-04-06 16:24'
+updated_date: '2026-04-07 13:10'
 labels:
-  - pr-review
-  - polish
+  - neoprism
 dependencies: []
 references:
   - 'https://github.com/hyperledger-identus/neoprism/pull/245'

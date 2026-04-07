@@ -4,8 +4,9 @@ title: Add midnight-did devshell to flake.nix
 status: Done
 assignee: []
 created_date: '2026-04-06 09:06'
-updated_date: '2026-04-06 09:24'
-labels: []
+updated_date: '2026-04-07 13:10'
+labels:
+  - midnight-did
 dependencies: []
 references:
   - flake.nix

@@ -65,6 +65,28 @@ Each submodule has its own instruction file. **Read these first when working in 
 
 4. **Check `.gitmodules`** to understand submodule URLs and paths.
 
+## Multi-Repo Workspace Guidelines
+
+This workspace contains multiple independent repositories (submodules). When working across projects:
+
+### Backlog Task Labeling
+
+**All backlog tasks must include a label identifying the related project.** This is essential for tracking and filtering tasks across the multi-repo workspace.
+
+| Label | Project |
+|-------|--------|
+| `cloud-agent` | Cloud Agent (Scala) |
+| `sdk-ts` | TypeScript SDK |
+| `midnight-did` | Midnight DID |
+| `lace-kyc` | Lace KYC |
+| `neoprism` | Neoprism (Rust) |
+| `workspace` | Workspace-wide / cross-project tasks |
+
+When creating or updating backlog tasks:
+1. Always add the appropriate project label
+2. For tasks spanning multiple projects, add all relevant labels
+3. For workspace-wide changes (e.g., CI updates, devshell changes), use the `workspace` label
+
 ---
 
 For deeper context, start with the project-specific instruction files linked above.

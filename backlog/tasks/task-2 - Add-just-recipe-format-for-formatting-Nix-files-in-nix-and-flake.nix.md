@@ -4,11 +4,9 @@ title: Add just recipe "format" for formatting Nix files in nix/ and flake.nix
 status: Done
 assignee: []
 created_date: '2026-04-06 08:01'
-updated_date: '2026-04-06 08:44'
+updated_date: '2026-04-07 13:10'
 labels:
-  - justfile
-  - nix
-  - formatting
+  - workspace
 dependencies: []
 references:
   - flake.nix

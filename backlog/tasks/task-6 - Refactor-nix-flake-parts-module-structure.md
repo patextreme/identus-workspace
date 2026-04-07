@@ -4,8 +4,9 @@ title: Refactor nix flake-parts module structure
 status: Done
 assignee: []
 created_date: '2026-04-06 14:44'
-updated_date: '2026-04-06 14:59'
-labels: []
+updated_date: '2026-04-07 13:10'
+labels:
+  - workspace
 dependencies: []
 ---
 
