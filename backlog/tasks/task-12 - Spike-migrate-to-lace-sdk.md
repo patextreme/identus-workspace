@@ -4,8 +4,9 @@ title: 'Spike: migrate to lace-sdk'
 status: To Do
 assignee: []
 created_date: '2026-04-07 10:31'
-updated_date: '2026-04-07 13:12'
-labels: []
+updated_date: '2026-04-16 02:56'
+labels:
+  - neoprism
 dependencies: []
 references:
   - 'https://github.com/input-output-hk/lace-platform/pkgs/npm/lace-sdk'
