@@ -65,6 +65,11 @@ Each submodule has its own instruction file. **Read these first when working in 
 
 4. **Check `.gitmodules`** to understand submodule URLs and paths.
 
+5. **⚠️ NEVER update submodules automatically.**
+   - Do **not** run `git pull`, `git submodule update`, or any other command that changes a submodule's commit as part of your normal workflow.
+   - Submodule updates must only happen when the **user explicitly requests** it (e.g., "update the sdk-ts submodule", "pull latest for cloud-agent").
+   - If you notice a submodule is out of date, mention it to the user but **do not** update it on your own.
+
 ## Multi-Repo Workspace Guidelines
 
 This workspace contains multiple independent repositories (submodules). When working across projects:
