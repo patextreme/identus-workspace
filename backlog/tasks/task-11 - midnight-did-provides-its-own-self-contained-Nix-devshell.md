@@ -5,7 +5,7 @@ status: To Do
 assignee:
   - ai-agent
 created_date: '2026-04-07 07:43'
-updated_date: '2026-04-17 19:05'
+updated_date: '2026-04-17 19:33'
 labels:
   - midnight-did
   - workspace
@@ -49,13 +49,14 @@ Make the midnight-did project fully self-contained by eliminating its dependency
 
 ## Acceptance Criteria
 <!-- AC:BEGIN -->
-- [ ] #1 #1 All packages listed in the **Required packages** table are available and executable in the new devshell — verifiable by running `cd midnight-did && nix develop -c bash -c 'docker --version && git --version && just --version && node --version'`
-- [ ] #2 #2 The devshell sets the same environment variables as the current workspace-level devshell: `PLAYWRIGHT_BROWSERS_PATH` pointing to `playwright-driver.browsers`, and `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true`
-- [ ] #3 #3 The devshell launches and functions independently from within the midnight-did directory without referencing the workspace-level flake — verifiable by `cd midnight-did && nix develop -c bash -c 'echo Success'` succeeding with no dependency on the workspace-level flake
-- [ ] #4 #4 `midnight-did/README.md` is updated to reflect the new devshell usage instructions
-- [ ] #5 #5 The midnight-did submodule includes its own package definition for compact-midnight (v0.5.1), making the devshell fully self-contained with no dependency on the workspace-level package
-- [ ] #6 #6 The workspace-level nix configuration contains no midnight-did devshell definition or compact-midnight package definition
-- [ ] #7 #7 The midnight-did project's existing test suite passes when run within the new self-contained devshell
+- [ ] #1 All packages listed in the **Required packages** table are available and executable in the new devshell — verifiable by running `cd midnight-did && nix develop -c bash -c '<package> --version'`
+- [ ] #2 The devshell sets the same environment variables as the current workspace-level devshell: `PLAYWRIGHT_BROWSERS_PATH` pointing to `playwright-driver.browsers`, and `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true`
+- [ ] #3 The current devshell's `cd midnight-did` directive is **removed** — it would be incorrect inside a self-contained midnight-did flake (it would navigate into `midnight-did/midnight-did`). The self-contained shellHook must only contain the two environment variable exports
+- [ ] #4 The devshell launches and functions independently from within the midnight-did directory without referencing the workspace-level flake — verifiable by `cd midnight-did && nix develop -c bash -c 'echo Success'` succeeding with no dependency on the workspace-level flake
+- [ ] #5 `midnight-did/README.md` is updated to reflect the new devshell usage instructions
+- [ ] #6 The midnight-did submodule includes its own package definition for compact-midnight (v0.5.1), making the devshell fully self-contained with no dependency on the workspace-level package
+- [ ] #7 The workspace-level nix configuration contains no midnight-did devshell definition or compact-midnight package definition
+- [ ] #8 The midnight-did project's existing test suite passes when run within the new self-contained devshell
 <!-- AC:END -->
 
 ## Definition of Done
