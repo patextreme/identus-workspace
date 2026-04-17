@@ -1,0 +1,13 @@
+{
+  "description": "Align backlog tasks against the task creation guidelines",
+  "loop": 20,
+  "steps": [
+    {
+      "prompt": "Review backlog task $ARGUMENTS and check whether it follows the backlog task creation guidelines.\nList the fixable issues and prioritize them by severity: high, medium, or low.\nIf the task lacks an implementation plan or note, that is acceptable.\n",
+      "exitCondition": "There are no issues of high or medium severity"
+    },
+    {
+      "prompt": "Proceed with fixing the top 3 high and medium severity issues."
+    }
+  ]
+}

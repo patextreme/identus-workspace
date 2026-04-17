@@ -1,0 +1,22 @@
+{
+  "description": "Review code changes to see if they align with the task definition",
+  "loop": 20,
+  "steps": [
+    {
+      "prompt": "Review code changes and assess whether they correctly implement the backlog task $ARGUMENTS. List any discrepancies and propose fixes for any issues you identify. It is acceptable to skip creating a commit, since commits should be done manually by the user. Do not make any changes yet, wait for my approval."
+    },
+    {
+      "prompt": "Please proceed with fixing the most severe issue, if any remain."
+    },
+    {
+      "prompt": "Review the task details to verify the task has been finalized according to the backlog task finalization guidelines. List actionable items to align with these guidelines and wait for my approval."
+    },
+    {
+      "prompt": "Please proceed with fixing the most severe issue concerning task finalization, if any remain. Prefer using backlog mcp to edit the task detail instead of directly manipulating the file."
+    },
+    {
+      "prompt": "Thank you",
+      "exitCondition": "The task is properly finalized according to the guidelines and there are no remaining high- or medium-priority issues"
+    }
+  ]
+}
