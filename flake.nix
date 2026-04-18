@@ -10,7 +10,6 @@
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    compact.url = "github:LFDT-Minokawa/compact/v0.30.0";
   };
 
   outputs =
@@ -22,7 +21,6 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         ./nix/apps
-        ./nix/packages
         ./nix/devshells
         ./nix/checks
       ];

@@ -8,8 +8,8 @@ This is a **git submodule workspace** for developing on the [Identus](https://gi
 |-----------|------------|------------|
 | `cloud-agent/` | Scala 3.3.5, SBT | `build.sbt` |
 | `sdk-ts/` | TypeScript, Yarn workspaces, Nx | `package.json` |
-| `midnight-did/` | Node.js 24+, npm workspaces, Midnight Compact | `package.json` |
-| `lace-kyc/` | TypeScript, tsup, Vitest | `package.json` |
+| `midnight-did/` | Node.js 24+, npm workspaces, Midnight Compact | `package.json`, `flake.nix` (own devshell) |
+| `lace-kyc/` | TypeScript, tsup, Vitest | `package.json`, `flake.nix` (own devshell) |
 | `neoprism/` | Rust, cargo, Just | `Cargo.toml` |
 | `nix/` | Nix flake modules | `flake.nix` (root) |
 | `backlog/` | Task tracking (non-code) | `config.yml` |
@@ -22,16 +22,21 @@ The workspace uses [Nix flakes](https://nixos.wiki/wiki/Flakes) for development 
 
 ### Nix Devshells
 
-Some project submodules provide their own Nix flake with a development devshell, while others do not.
+Some project submodules provide their own Nix flake with a development devshell, while others use the workspace-level devshell.
 
-- **For submodules with their own flake**: Navigate to the submodule directory and use its devshell:
+- **Workspace default devshell** (run from repo root): provides `docker`, `git`, `just`, `nix`, `nixfmt`, `which`:
+  ```bash
+  nix develop -c <command>
+  ```
+
+- **Submodules with their own flake** (`midnight-did`, `lace-kyc`): navigate to the submodule directory and use its devshell:
   ```bash
   cd <submodule> && nix develop -c <command>
   ```
 
-- **For submodules without a flake**: This workspace's flake provides a devshell that can be used with the corresponding name:
+- **For submodules without a flake** (`cloud-agent`, `sdk-ts`, `neoprism`): use the workspace default devshell from the repo root:
   ```bash
-  nix develop .#<name> -c <command>
+  nix develop -c <command>
   ```
 
 ### Nix Apps
